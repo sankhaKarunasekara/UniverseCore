@@ -2,13 +2,12 @@ package lk.universe.core;
 
 import com.google.appengine.api.utils.SystemProperty;
 
-import java.io.IOException;
-import java.util.Properties;
-
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Properties;
 
 @WebServlet(name = "HelloAppEngine", value = "/hello")
 public class HelloAppEngine extends HttpServlet {
@@ -29,5 +28,4 @@ public class HelloAppEngine extends HttpServlet {
           + " OS: " + System.getProperty("os.name")
           + " User: " + System.getProperty("user.name");
   }
-
 }
