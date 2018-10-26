@@ -153,7 +153,6 @@ public class URLDataDAO {
             urlData.setLastCheckedTime((Date)entity.getProperty("lastCheckedTime"));
             LOGGER.warning("date"+urlData.getLastCheckedTime().toString());
             return urlData;
-
         }catch(Exception e){
             throw e;
         }

@@ -34,6 +34,11 @@ public class URLDataService {
         return urlDataDAO.getURLDataEntity(id);
     }
 
+    public List<URLData> getAllURLData() {
+        URLDataDAO urlDataDAO = getUrlDataDAO();
+        return urlDataDAO.getAllUrlDataEntries();
+    }
+
     public void createURLData(String url, String extractMethodString, String label){
 
         try {
@@ -69,11 +74,6 @@ public class URLDataService {
 
         URLDataDAO urlDataDAO = getUrlDataDAO();
         urlDataDAO.updateURLDataEntity(urlData);
-    }
-
-    public List<URLData> getAllURLData() {
-        URLDataDAO urlDataDAO = getUrlDataDAO();
-        return urlDataDAO.getAllUrlDataEntries();
     }
 
     public void deleteURLData(long urlDataId) {
